@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  text-align: center;
+}
+
+#array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  height: 320px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #f4f7fb;
+  border-radius: 15px; 
+  padding: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.bar {
+  width: 20px;
+  margin: 0 5px;
+  background-color: #B3D9FF;
+  transition: height 0.3s ease-in-out;
+}
+
+.bar.sorted {
+  background-color: #B3D9FF;
+}
+
+.bar.comparing {
+  background-color: #FF4081;
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+}
+
+.fontColor {
+  color: #3863a0;
+}
