@@ -2,19 +2,25 @@
   <button class="btn" (click)="generateNewArray()">Generate New Array</button>
 
   <div class="slider-container">
-    <span>Change Array Size & Sorting Speed</span>
+    <span>Sorting Speed</span>
     <input
       type="range"
+      id="slider"
       class="slider"
+      [(ngModel)]="sliderValue"
+      [min]="0"
+      [max]="100"
+      [step]="1"
 
     />
   </div>
 
   <nav class="nav">
-    <button class="btn" (click)="sortArray('merge')">Merge Sort</button>
-    <button class="btn" (click)="sortArray('quick')">Quick Sort</button>
-    <button class="btn" (click)="sortArray('heap')">Heap Sort</button>
     <button class="btn" (click)="sortArray('bubble')">Bubble Sort</button>
+    <button class="btn" (click)="sortArray('bucket')">Bucket Sort</button>
+    <button class="btn" (click)="sortArray('heap')">Heap Sort</button>
+    <button class="btn" (click)="sortArray('insert')">Insertion Sort</button>
+    <button class="btn" (click)="sortArray('quick')">Quick Sort</button>
   </nav>
 </div>
 
