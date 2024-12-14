@@ -32,14 +32,14 @@
 }
 
 .bar {
-  width: 20px;
-  margin: 0 5px;
-  background-color: #B3D9FF;
+  width: 5px;
+  margin: 0 3px !important;
+  background-color: #046fda;
   transition: height 0.3s ease-in-out;
 }
 
 .bar.sorted {
-  background-color: #B3D9FF;
+  background-color: #046fda;
 }
 
 .bar.comparing {

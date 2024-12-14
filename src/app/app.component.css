@@ -1,0 +1,47 @@
+/* Same as the CSS provided earlier */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .btn {
+    background-color: #34495e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #007BFF;
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .slider {
+    width: 150px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 10px;
+  }
+  

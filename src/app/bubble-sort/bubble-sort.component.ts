@@ -18,7 +18,7 @@ export class BubbleSortComponent {
 
   generateArray() {
     this.array = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 50; i++) {
       this.array.push(Math.floor(Math.random() * 100) + 1);
     }
     this.sortedValues = [...this.array];

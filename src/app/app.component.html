@@ -1,25 +1,36 @@
-<div class="row d-flex justify-content-center align-items-center" style="margin-top: 40px;">
-  <div class="col-lg-1" style="padding: 0;" *ngFor="let type of sortTypes">
-    <div class="card text-center">
-      <div class="card-body">
-        <button class="fontColor" (click)="showComponent(type.type)" style="font-size: 40px; ">
-          <i class="fa-solid fa-play"></i>
-        </button>
-        <p class="card-text">{{type.type}}</p>
-      </div>
+<div class="header">
+  <button class="btn" (click)="generateNewArray()">Generate New Array</button>
+
+  <div class="slider-container">
+    <span>Change Array Size & Sorting Speed</span>
+    <input
+      type="range"
+      class="slider"
+
+    />
+  </div>
+
+  <nav class="nav">
+    <button class="btn" (click)="sortArray('merge')">Merge Sort</button>
+    <button class="btn" (click)="sortArray('quick')">Quick Sort</button>
+    <button class="btn" (click)="sortArray('heap')">Heap Sort</button>
+    <button class="btn" (click)="sortArray('bubble')">Bubble Sort</button>
+  </nav>
+</div>
+
+
+<div class="row d-flex justify-content-center align-items-center">
+  <div class="row">
+    <h2 class="text-center fontColor" style="margin-top: 20px;">{{sortType}} Visualization</h2>
+    <div id="array-container">
+        <div *ngFor="let value of array; let i = index" class="bar" 
+             [style.height.px]="value * 3" 
+             [ngClass]="{'sorted': value === sortedValues[i], 'comparing': isComparing(i)}">
+        </div>
     </div>
   </div>
 </div>
-<div class="row d-flex justify-content-center align-items-center">
-  <app-bubble-sort *ngIf="currentSort === 'bubble'"></app-bubble-sort>
-  <app-bucketsort *ngIf="currentSort === 'bucket'"></app-bucketsort>
-  <app-heapsort *ngIf="currentSort === 'heap'"></app-heapsort>
-  <app-insertionsort *ngIf="currentSort === 'insert'"></app-insertionsort>
-  <app-mergesort *ngIf="currentSort === 'merge'"></app-mergesort>
-  <app-quicksort *ngIf="currentSort === 'quick'"></app-quicksort>
-  <app-radixsort *ngIf="currentSort === 'radix'"></app-radixsort>
-  <app-selectionsort *ngIf="currentSort === 'select'"></app-selectionsort>
-</div>
+
 
 
 
